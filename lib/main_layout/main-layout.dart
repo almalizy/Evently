@@ -1,10 +1,9 @@
+import 'package:evently/l10n/app_localizations.dart';
 import 'package:evently/routing/app-routes.dart';
 import 'package:evently/utils/app_images.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
 import 'tabs/home/home.dart';
-
 
 class MainLayout extends StatefulWidget {
   const MainLayout({super.key});
@@ -51,21 +50,21 @@ class _MainLayoutState extends State<MainLayout> {
           onTap: _onTap,
           items: [
             BottomNavigationBarItem(
-                activeIcon: SvgPicture.asset(AppSvgs.selectedHomeIcon),
-                icon: SvgPicture.asset(AppSvgs.home),
+                activeIcon: SvgPicture.asset(AppSvgs.homeIcon),
+                icon: SvgPicture.asset(AppSvgs.homeIcon),
                 label: AppLocalizations.of(context)!.home),
             BottomNavigationBarItem(
-                activeIcon: SvgPicture.asset(AppSvgs.selectedMapIcon),
-                icon: SvgPicture.asset(AppSvgs.map),
+                activeIcon: SvgPicture.asset(AppSvgs.mapIcon),
+                icon: SvgPicture.asset(AppSvgs.mapIcon),
                 label: AppLocalizations.of(context)!.map),
             BottomNavigationBarItem(
-                activeIcon: SvgPicture.asset(AppSvgs.selectedFavIcon),
-                icon: SvgPicture.asset(AppSvgs.fav),
+                activeIcon: SvgPicture.asset(AppSvgs.userIcon),
+                icon: SvgPicture.asset(AppSvgs.userIcon),
                 label: AppLocalizations.of(context)!.favourite),
             BottomNavigationBarItem(
-                activeIcon: SvgPicture.asset(AppSvgs.selectedProfileIcon),
-                icon: SvgPicture.asset(AppSvgs.profile),
-                label: 'AppLocalizations.of(context)!.profile),'
+                activeIcon: SvgPicture.asset(AppSvgs.favoriteIcon),
+                icon: SvgPicture.asset(AppSvgs.favoriteIcon),
+                label: AppLocalizations.of(context)!.profile),
           ]),
     );
   }

@@ -1,8 +1,10 @@
 import 'package:evently/config/theme/theme-manager.dart';
 import 'package:evently/firebase_options.dart';
+import 'package:evently/l10n/app_localizations.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'routing/app-routes.dart';
 
@@ -37,7 +39,17 @@ class MyApp extends StatelessWidget {
           initialRoute: RoutesNames.onBoarding,
           theme: ThemeManager.light,
           darkTheme: ThemeManager.dark,
-          themeMode: ThemeMode.light
+          themeMode: ThemeMode.light,
+          localizationsDelegates: [
+            AppLocalizations.delegate,
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+          ],
+          supportedLocales: [
+            Locale('en'), // English
+            Locale('es'), // Spanish
+          ],
         );
       },
     );

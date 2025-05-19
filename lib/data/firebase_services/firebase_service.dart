@@ -8,6 +8,7 @@ class FirebaseServices {
     FirebaseFirestore db =   FirebaseFirestore.instance;
     CollectionReference<Map<String, dynamic>>  eventCollection = db.collection("events");
     DocumentReference<Map<String, dynamic>>  document = eventCollection.doc();
+    event.id = document.id ;
     return document.set(event.toJson()
       // {
       //   "title":event.title,

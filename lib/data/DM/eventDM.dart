@@ -4,6 +4,7 @@ import 'package:evently/utils/constant_manager.dart';
 import 'package:flutter/material.dart';
 
 class EventDM {
+  String id;
   final CategoryDM category;
   final String title;
   final String description;
@@ -13,6 +14,7 @@ class EventDM {
   final int? lng;
 
   EventDM({
+    this.id = "",
     required this.category,
     required this.title,
     required this.description,
@@ -24,6 +26,7 @@ class EventDM {
 
   EventDM.fromJson(Map<String, dynamic> json)
     : this(
+        id: json["id"],
         title: json["title"],
         description: json["description"],
         date: json["date"].toDate(),
@@ -32,6 +35,7 @@ class EventDM {
         ),
       );
   Map<String, dynamic> toJson() => {
+    "id": id,
     "title": title,
     "description": description,
     "categoryId": category.id,

@@ -94,7 +94,7 @@ class OnBoarding extends StatelessWidget {
             activeShape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.zero)),
         onDone: () {
-          Navigator.pushReplacementNamed(context, RoutesNames.signUp);
+          Navigator.pushReplacementNamed(context, RoutesNames.createEvent);
         });
 
   }
